@@ -1,7 +1,7 @@
-import 'package:deevth/helper_class/controller_helper.dart';
-import 'package:deevth/widget/socai_icon.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../helper_class/controller_helper.dart';
+import '../widget/socai_icon.dart';
 
 class Bottom extends StatelessWidget {
   const Bottom({Key? key}) : super(key: key);
@@ -15,7 +15,7 @@ class Bottom extends StatelessWidget {
       alignment: Alignment.center,
       margin: EdgeInsets.zero,
       padding: EdgeInsets.only(top: size.height*0.15),
-      decoration: BoxDecoration(
+      decoration:const BoxDecoration(
           image: DecorationImage(image: AssetImage("images/back_tile.png") ,fit: BoxFit.cover),
       ),
         child: Column(

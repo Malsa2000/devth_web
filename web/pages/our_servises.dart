@@ -1,40 +1,20 @@
-import 'package:deevth/helper_class/controller_helper.dart';
-import 'package:deevth/widget/title.dart';
+
 import 'package:flutter/material.dart';
+import '../helper_class/controller_helper.dart';
+import '../helper_class/string.dart';
+import '../widget/title.dart';
 
 class OurServesis extends StatelessWidget {
   OurServesis({Key? key}) : super(key: key);
-
-  List<String> mainText = [
-    "Designing a space is more than just a design. It is a personalization to your needs:",
-    "When it comes to marketing we provide full-fledged  customized services:",
-    "In a world full of possibilities, technology has became part of our daily lives. We provide IT consultation on all aspects.",
-    "We make businesses more  efficient by providing the right analysis and consultation a client needs:",
-    "We provide training for executives, presentation decks for shareholders, and we work side-by-side with them until we fulfill every service they need:"
-  ];
-  List<String> textTile = [
-    "Architecture",
-    "Marketing:",
-    "Technology:",
-    "Business",
-    "Management"
-  ];
-  List<String> image = ["servis1", "image1", "servis3", "image1", "serves5"];
-  List<String> text1 = ["• Interior Design","• Branding Strategy","• Full stack development"," Business Strategy & Mod-eling"
-  ,"• PMO & Project Manage-ment"];
-  List<String> text2 = ["• Exterior Design","• Re-branding","• ERP solutions" ,"• Process Mapping & Auto-mation","• Executive Management"];
-
-
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
     return ListView(
       shrinkWrap: true,
-      padding:
-          EdgeInsets.only(top: size.height * 0.1, bottom: size.height * 0.1),
+      padding: EdgeInsets.only(top: size.height * 0.1, bottom: size.height * 0.1),
       children: [
-        conteainerTitle("Our Services", size, context, 0.08, 0.54),
+        conteainerTitle(AllText.service, size, context, 0.08, 0.54),
         Container(
           padding: EdgeInsets.all(size.width * 0.012),
           margin: EdgeInsets.only(
@@ -48,10 +28,7 @@ class OurServesis extends StatelessWidget {
               borderRadius: BorderRadius.circular(size.height * 0.5),
               border: Border.all(color: Color(context.blackColor), width: 0.4)),
           child: context.text(
-              text:
-                  '''We at Deevth consider every detail of our services. We exist to make the life of the clients 
-          easier and simpler, and to provide everything a client needs in one place when it comes to services and consultation related 
-          to the needs the business.''',
+              text: AllText.ourServiesText,
               size: size.width * 0.012,
               color: context.blackColor),
         ),
@@ -124,18 +101,18 @@ class OurServesis extends StatelessWidget {
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             context.text(
-                                text: mainText[index],
+                                text: AllText.mainText[index],
                                 size: size.width * 0.0085,
                                 color: context.blackColor,
                                 wieght: FontWeight.w600),
                             SizedBox(height: size.height * 0.013),
                             context.text(
-                                text: text1[index],
+                                text: AllText.text1[index],
                                 size: size.width * 0.0085,
                                 color: context.blackColor,
                                 wieght: FontWeight.w600),
                             context.text(
-                                text: text2[index],
+                                text: AllText.text2[index],
                                 size: size.width * 0.0085,
                                 color: context.blackColor,
                                 wieght: FontWeight.w600),
@@ -157,7 +134,7 @@ class OurServesis extends StatelessWidget {
                             Color(context.mainColor)
                           ])),
                       child: context.text(
-                          text: textTile[index],
+                          text: AllText.textTile[index],
                           size: size.width*0.011,
                           wieght: FontWeight.w300,
                           color: context.whiteColor),
@@ -171,7 +148,7 @@ class OurServesis extends StatelessWidget {
                             child: CircleAvatar(
                               radius: size.width * 0.058,
                               backgroundImage:
-                                  AssetImage("images/${image[index]}.png"),
+                                  AssetImage("images/${AllText.image[index]}.png"),
                             ))),
                   ],
                 );
