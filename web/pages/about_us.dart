@@ -1,8 +1,10 @@
-import 'package:deevth/helper_class/controller_helper.dart';
-import 'package:deevth/widget/socai_icon.dart';
-import 'package:deevth/widget/title.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../helper_class/controller_helper.dart';
+import '../helper_class/string.dart';
+import '../widget/image_contaner.dart';
+import '../widget/socai_icon.dart';
+import '../widget/title.dart';
 class AboutUs extends StatelessWidget {
   const AboutUs({Key? key}) : super(key: key);
 
@@ -12,28 +14,14 @@ class AboutUs extends StatelessWidget {
     return ListView(
       shrinkWrap: true,
       children:[
-        conteainerTitle("About Us" ,size ,context,0.37 ,0.23,),
+        conteainerTitle(AllText.about_us ,size ,context,0.08, 0.54),
         Stack(children: [
         Image( image:const AssetImage("images/background_co.png"),width: size.width,),
           Row(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-             margin: EdgeInsets.only(left: size.width * 0.08,top: size.height * 0.07),
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                  image: DecorationImage(image: AssetImage("images/image1.png")),
-                  borderRadius: BorderRadius.circular(size.width* 0.03),
-                  color: Color(context.mainColor),
-                  boxShadow:const [
-                    BoxShadow(color: Colors.black26 ,blurRadius: 3 ,offset: Offset(3, 4))
-                  ]
-              ),
-              width: size.width * 0.38,
-              height: size.width * 0.25,
-
-            ),
+            ImageController(size ,context , 0.08,0.07 ,0),
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -42,7 +30,7 @@ class AboutUs extends StatelessWidget {
                 margin: EdgeInsets.only(top: size.height * 0.07 ,left :size.width*0.05),
                 width: size.width * 0.38,
                 alignment: Alignment.centerLeft,
-                child:context.text(text: "About Us", size: size.width* 0.022,align: TextAlign.start,
+                child:context.text(text: AllText.about_us, size: size.width* 0.022,align: TextAlign.start,
                     color: context.mainColor,wieght: FontWeight.w600),
 
               ),
@@ -51,40 +39,20 @@ class AboutUs extends StatelessWidget {
                 margin: EdgeInsets.only(left: size.width * 0.05,top: size.height * 0.01 ,bottom:size.height * 0.01  ),
                 width: size.width * 0.4,
                 alignment: Alignment.centerLeft,
-             child:   context.text(text: '''
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
-minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut 
-aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in
-vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis 
-at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum 
-zzril delenit augue duis dolore te feugait nulla facilisi. '''
+             child:   context.text(text: AllText.aboutUsText
                     , size: size.width*0.011, color: context.mainColor ,align: TextAlign.start),
               ),
 
               Padding(padding: EdgeInsets.only(left:size.width * 0.05, ),
-              child: context.text(text: "Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, ",
+              child: context.text(text: AllText.aboutUsText2,
                size:  size.width*0.011, color: context.mainColor),
 
               )
 
             ],)
         ],),
-          Container(
-            margin: EdgeInsets.only(left: size.width * 0.25,top: size.height * 0.7),
-            alignment: Alignment.center,
-            decoration: BoxDecoration(
-                image: DecorationImage(image: AssetImage("images/image1.png")),
-                borderRadius: BorderRadius.circular(size.width* 0.03),
-                color: Color(context.mainColor),
-                boxShadow:const [
-                  BoxShadow(color: Colors.black26 ,blurRadius: 3 ,offset: Offset(3, 4))
-                ]
-            ),
-            width: size.width * 0.38,
-            height: size.width * 0.25,
+          ImageController(size ,context , 0.25,0.7,0),
 
-          ),
           Container(
             margin: EdgeInsets.only(left: size.width * 0.25,top:size.height * 1.3,bottom: 0.01 ),
             alignment: Alignment.center,
@@ -104,14 +72,14 @@ zzril delenit augue duis dolore te feugait nulla facilisi. '''
                     ]
                 )
             ),
-            child: context.text(text: "Don’t be shy, ask Deevth!", size: size.width*0.021, color: context.whiteColor ,wieght: FontWeight.w400)
+            child: context.text(text: AllText.aboutUsText3, size: size.width*0.021, color: context.whiteColor ,wieght: FontWeight.w400)
           ),
           Container(
             margin: EdgeInsets.only(top: size.height*1.47 ,right: size.width*0.25 ,left: size.width*0.25 ),
             child: Column(
               children: [
                     Text(
-                  'Monday - Sunday: 7am - 5pm',
+                 AllText.aboutUsText4,
                   style: TextStyle(
                       decoration: TextDecoration.underline,
                       color:const Color(0xFF3b4d5b),
@@ -129,8 +97,7 @@ zzril delenit augue duis dolore te feugait nulla facilisi. '''
                 ),
               ),
               SizedBox(height: size.height * 0.005,),
-              context.text(text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh"
-                  " euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. ", size: size.width*0.011, color: (0xFF3b4d5b),)
+              context.text(text: AllText.aboutUsText5, size: size.width*0.011, color: (0xFF3b4d5b),)
     ],),
           ),
            Container(
@@ -139,13 +106,13 @@ zzril delenit augue duis dolore te feugait nulla facilisi. '''
     alignment: Alignment.center,
       margin: EdgeInsets.only(top: size.height*1.73),
       padding: EdgeInsets.only(top: size.height*0.15),
-    decoration: BoxDecoration(
-    image: DecorationImage(image: AssetImage("images/back_tile.png") ,fit: BoxFit.cover),
+    decoration: const BoxDecoration(
+    image:  DecorationImage(image: AssetImage("images/back_tile.png") ,fit: BoxFit.cover),
     ),
     child: Column(
     children: [
-    context.text(text: "@deevth", size: size.width*0.011, color: (0xFFf0eee4),wieght: FontWeight.w200),
-    context.text(text: "wherever you need us !", size: size.width*0.011, color: (0xFFf0eee4),wieght: FontWeight.w300),
+    context.text(text: AllText.aboutUsText7, size: size.width*0.011, color: (0xFFf0eee4),wieght: FontWeight.w200),
+    context.text(text: AllText.aboutUsText6, size: size.width*0.011, color: (0xFFf0eee4),wieght: FontWeight.w300),
     SizedBox(height: size.height* 0.02,),
     Row(
     mainAxisAlignment: MainAxisAlignment.center,
@@ -162,13 +129,13 @@ zzril delenit augue duis dolore te feugait nulla facilisi. '''
 
     ],),
     SizedBox(height: size.height* 0.02,),
-    context.text(text: "Home", size: size.width*0.011, color: (0xFFf0eee4),wieght: FontWeight.w200),
+    context.text(text: AllText.home, size: size.width*0.011, color: (0xFFf0eee4),wieght: FontWeight.w200),
     SizedBox(height: size.height* 0.02,),
-    context.text(text: "Who we Are", size: size.width*0.011, color: (0xFFf0eee4),wieght: FontWeight.w200) ,
+    context.text(text: AllText.whoAreTitle, size: size.width*0.011, color: (0xFFf0eee4),wieght: FontWeight.w200) ,
     SizedBox(height: size.height* 0.02,),
-    context.text(text: "Our Servics", size: size.width*0.011, color: (0xFFf0eee4),wieght: FontWeight.w200),
+    context.text(text: AllText.service, size: size.width*0.011, color: (0xFFf0eee4),wieght: FontWeight.w200),
     SizedBox(height: size.height* 0.02,),
-    context.text(text: "About us", size: size.width*0.011, color: (0xFFf0eee4),wieght: FontWeight.w200),
+    context.text(text: AllText.about_us, size: size.width*0.011, color: (0xFFf0eee4),wieght: FontWeight.w200),
 
     ],
     ),
@@ -179,8 +146,7 @@ zzril delenit augue duis dolore te feugait nulla facilisi. '''
 
 
         ],),
-
-
    ] );
   }
+
 }

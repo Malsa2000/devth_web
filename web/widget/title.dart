@@ -1,12 +1,13 @@
-import 'package:deevth/helper_class/controller_helper.dart';
 import 'package:flutter/material.dart';
+
+import '../helper_class/controller_helper.dart';
 Widget conteainerTitle(String title ,Size size ,BuildContext context , double marginLeft ,double marginRight){
   return Container(
     margin: EdgeInsets.only(left: size.width*marginLeft  , right: size.width*marginRight),
     alignment: Alignment.centerLeft,
     decoration: BoxDecoration(
       borderRadius: BorderRadius.all(Radius.circular(size.width * 0.5)),
-      color: Color(0xFF3a4c5a),
+      color:const Color(0xFF3a4c5a),
 
     ),
     height: size.height * 0.13,
@@ -18,7 +19,7 @@ Widget conteainerTitle(String title ,Size size ,BuildContext context , double ma
       decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(size.width*0.5)),
           boxShadow:const [BoxShadow(color: Colors.black26 ,blurRadius: 2 ,offset: Offset(3,3))],
-          gradient: LinearGradient(
+          gradient:const LinearGradient(
               begin: Alignment.centerLeft,
               end: Alignment.centerRight,
               colors: [
@@ -33,7 +34,7 @@ Widget conteainerTitle(String title ,Size size ,BuildContext context , double ma
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Image(
-            image: AssetImage("images/logo.png"),
+            image:const AssetImage("images/logo.png"),
             width: size.width* 0.03,
             height: size.height * 0.04,
           ),
