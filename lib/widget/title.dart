@@ -35,11 +35,13 @@ Widget conteainerTitle(String title ,Size size ,BuildContext context , double ma
         children: [
           Image(
             image:const AssetImage("images/logo.png"),
-            width: size.width* 0.03,
-            height: size.height * 0.04,
+            width: size.width* 0.045,
+            height: size.height * 0.055,
           ),
-          context.text(text: "Deevth  |", size: size.width * 0.025, color: (0xFFcbc8b9),wieght: FontWeight.w300),
-          context.text(text: "$title", size: size.width * 0.025, color: (0xFFFFFFFF) ,wieght: FontWeight.w400)
+          context.text(text: "Deevth  | ", size: size.width * 0.014, color: (0xFFcbc8b9),wieght: FontWeight.w100,
+              fontStyle: FontStyle.italic),
+          context.text(text: "$title", size: size.width * 0.016, color: (0xFFFFFFFF) ,wieght: FontWeight.w100 ,
+          fontStyle: FontStyle.italic)
 
         ],
       ),

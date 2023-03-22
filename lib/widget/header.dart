@@ -10,9 +10,9 @@ Widget header(String name , Size size , BuildContext context ,bool select){
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Padding(
-          padding: EdgeInsets.only(left: size.width* 0.011,),
+          padding: EdgeInsets.only( left:name == "Home"?size.width* 0  : size.width* 0.015,),
           child: TextButton(onPressed: (){},
-              child: context.text(text: "$name", size:  size.width* 0.015, color: select == true ? (0xFFa1c0bf) :  context.whiteColor,
+              child: context.text(text: "$name", size:  size.width* 0.013, color: select == true ? (0xFFa1c0bf) :  context.whiteColor,
                   wieght: FontWeight.w300)),
         ),
         CircleAvatar(
