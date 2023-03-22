@@ -32,7 +32,7 @@ extension ControllerHelp on BuildContext{
   return Text(
 
       text ,style :GoogleFonts.arimo(fontSize :size ,fontWeight: wieght ,fontStyle: fontStyle,
-      color : Color(color) ,height:1.3) ,textAlign: align, );
+      color : Color(color) ,height:1.2) ,textAlign: align, );
   //Arimo
   }
 }

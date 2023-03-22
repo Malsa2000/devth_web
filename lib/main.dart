@@ -1,6 +1,7 @@
+import 'package:deevth/web/pages/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'app/home.dart';
+import '../app/home.dart';
 
 
 void main() {
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  ScreenUtilInit(
-        designSize: const Size(1920, 8000),
+        designSize: const Size(1820, 5024),
     minTextAdapt: true,
     builder: (context ,child) {
       return MaterialApp(
@@ -20,7 +21,11 @@ class MyApp extends StatelessWidget {
         initialRoute: "/home",
         home: Home(),
         routes: {
+          //home web
           "/home" : (context) =>  Home(),
+
+          // home app
+          "/home_app" :(context)=>HomeApp()
 
 
 

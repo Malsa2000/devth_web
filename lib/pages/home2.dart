@@ -12,25 +12,25 @@ class Home2 extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Container(
-      padding: EdgeInsets.only(left: size.width* 0.08 ),
+      padding: EdgeInsets.only(left: size.width* 0.1 ),
       child:
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height:  size.height * 0.1,),
-              conteainerTitle( AllText.whoAreTitle ,size ,context,0.30 ,0),
+              conteainerTitle( AllText.whoAreTitle ,size ,context, 0.30 ,0),
               SizedBox(height:  size.height * 0.05,),
               Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                 context.text(text: AllText.whoAreSubTitle,
-                    size: size.width* 0.022, color: (0xFF3b4d5b),align: TextAlign.start ,wieght: FontWeight.w600),
+                    size: size.width* 0.0205, color: (0xFF3b4d5b),align: TextAlign.start ,wieght: FontWeight.w600),
                 SizedBox(height: size.height *0.02),
                 Padding(padding: EdgeInsets.only(right: size.width* 0.13),
                   child: context.text(text:AllText.whoArePhrgraph,
-                      size: size.width* 0.012, color: (0xFF3b4d5b),align: TextAlign.start )
+                      size: size.width* 0.01, color: (0xFF3b4d5b),align: TextAlign.start )
                 )
 
     ],),

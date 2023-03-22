@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 Widget socialIcon(String image ,Size size){
-  return Row(
-    children: [
+  return
 
+    Row(
+    children: [
       Padding(
         padding: EdgeInsets.only(left: size.width* 0.006),
         child: Image(
