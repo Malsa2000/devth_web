@@ -32,11 +32,12 @@ class OurServesis extends StatelessWidget {
         ),
         ConstrainedBox(
           constraints: BoxConstraints(
-            maxHeight: size.height * 0.65,
-            minHeight: size.height * 0.5,
+            maxHeight: size.width>500?size.height * 0.65:size.height * 0.2,
+            minHeight: size.width>500?size.height * 0.5:size.height * 0.2,
           ),
           child: GridView.builder(
               itemCount: 5,
+              physics: NeverScrollableScrollPhysics(),
               padding: EdgeInsets.only(
                   left: size.width * 0.09, right: size.width * 0.09),
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
