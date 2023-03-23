@@ -89,45 +89,54 @@ class AboutUs extends StatelessWidget {
               context.text(text: AllText.aboutUsText5, size: size.width*0.011, color: (0xFF3b4d5b),)
             ],),
         ),
-        Container(
-          width: size.width,
-          alignment: Alignment.center,
-          padding: EdgeInsets.only(top: size.height*0.15 ,bottom:  size.height*0.05),
-          decoration: const BoxDecoration(
-            image:  DecorationImage(image: AssetImage("images/tile_back.png") ,fit: BoxFit.cover),
-          ),
-          child: Column(
-            children: [
-              context.text(text: AllText.aboutUsText7, size: size.width*0.01,
-                  color: (0xFFf0eee4),wieght: FontWeight.w100,fontStyle: FontStyle.italic),
-              context.text(text: AllText.aboutUsText6,fontStyle: FontStyle.italic,
-                  size: size.width*0.01, color: (0xFFf0eee4),wieght: FontWeight.w100),
-              SizedBox(height: size.height* 0.02,),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
+        Stack(
+          children: [
+            Container(
+              width: size.width,
+              alignment: Alignment.center,
+              padding: EdgeInsets.only(top: size.height*0.15 ,bottom:  size.height*0.05),
+              decoration: const BoxDecoration(
+               // image:  DecorationImage(image: AssetImage("images/tile_back.png") ,fit: BoxFit.cover),
+                image: DecorationImage(
+                  image: AssetImage("images/back_tile.png") ,
+                  fit: BoxFit.cover,
+                ),
+                //color: Colors.black,
+              ),
+              child: Column(
                 children: [
-                  socialIcon("facebook" ,size),
-                  socialIcon("twitter" ,size),
-                  socialIcon("youtupe" ,size),
-                  socialIcon("linkedin" ,size),
-                  socialIcon("snap" ,size),
-                  socialIcon("p" ,size),
-                  socialIcon("insta" ,size),
-                  socialIcon("tiktok" ,size),
+                  context.text(text: AllText.aboutUsText7, size: size.width*0.01,
+                      color: (0xFFf0eee4),wieght: FontWeight.w100,fontStyle: FontStyle.italic),
+                  context.text(text: AllText.aboutUsText6,fontStyle: FontStyle.italic,
+                      size: size.width*0.01, color: (0xFFf0eee4),wieght: FontWeight.w100),
+                  SizedBox(height: size.height* 0.02,),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      socialIcon("facebook" ,size),
+                      socialIcon("twitter" ,size),
+                      socialIcon("youtupe" ,size),
+                      socialIcon("linkedin" ,size),
+                      socialIcon("snap" ,size),
+                      socialIcon("p" ,size),
+                      socialIcon("insta" ,size),
+                      socialIcon("tiktok" ,size),
 
-                ],),
-              SizedBox(height: size.height* 0.02,),
-              context.text(text: AllText.home, size: size.width*0.011, color: (0xFFf0eee4),wieght: FontWeight.w200),
-              SizedBox(height: size.height* 0.02,),
-              context.text(text: AllText.whoAreMenu, size: size.width*0.011, color: (0xFFf0eee4),wieght: FontWeight.w200) ,
-              SizedBox(height: size.height* 0.02,),
-              context.text(text: AllText.serviceMenu, size: size.width*0.011, color: (0xFFf0eee4),wieght: FontWeight.w200),
-              SizedBox(height: size.height* 0.02,),
-              context.text(text: AllText.about_us_menu, size: size.width*0.011, color: (0xFFf0eee4),wieght: FontWeight.w200),
+                    ],),
+                  SizedBox(height: size.height* 0.02,),
+                  context.text(text: AllText.home, size: size.width*0.011, color: (0xFFf0eee4),wieght: FontWeight.w200),
+                  SizedBox(height: size.height* 0.02,),
+                  context.text(text: AllText.whoAreMenu, size: size.width*0.011, color: (0xFFf0eee4),wieght: FontWeight.w200) ,
+                  SizedBox(height: size.height* 0.02,),
+                  context.text(text: AllText.serviceMenu, size: size.width*0.011, color: (0xFFf0eee4),wieght: FontWeight.w200),
+                  SizedBox(height: size.height* 0.02,),
+                  context.text(text: AllText.about_us_menu, size: size.width*0.011, color: (0xFFf0eee4),wieght: FontWeight.w200),
 
-            ],
-          ),
+                ],
+              ),
+            ),
+          ],
         )
       ],),
       ],
