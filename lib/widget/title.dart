@@ -10,11 +10,11 @@ Widget conteainerTitle(String title ,Size size ,BuildContext context , double ma
       color:const Color(0xFF3a4c5a),
 
     ),
-    height: size.height * 0.13,
+    height:size.width > 500 ? size.height * 0.13 :size.height *0.07,
     width:size.width * 0.38,
     child: Container(
       alignment: Alignment.center,
-      height: size.height * 0.13,
+      height: size.width > 500 ?size.height * 0.13:size.height*0.07,
       width:size.width * 0.31,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(size.width*0.5)),

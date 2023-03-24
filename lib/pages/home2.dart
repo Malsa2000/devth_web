@@ -18,9 +18,9 @@ class Home2 extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height:  size.height * 0.1,),
+              SizedBox(height:size.width > 500 ?  size.height * 0.1:size.height*0.05,),
               conteainerTitle( AllText.whoAreTitle ,size ,context, 0.30 ,0),
-              SizedBox(height:  size.height * 0.05,),
+              SizedBox(height:size.width > 500 ?  size.height * 0.05:size.height*0.025,),
               Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,

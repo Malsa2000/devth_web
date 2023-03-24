@@ -21,7 +21,8 @@ class Home extends StatelessWidget {
      body: ListView(
         children: [
           Container(
-           margin: EdgeInsets.only(bottom: size.height * 0.018,top:  size.height * 0.005),
+           margin: EdgeInsets.only(bottom:size.width > 500 ? size.height * 0.018 :size.height* 0.009,
+               top:size.width > 500 ?  size.height * 0.005 :size.height *0.002),
             padding: EdgeInsets.symmetric(horizontal:  size.width * 0.012),
             decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -33,15 +34,15 @@ class Home extends StatelessWidget {
                 ]
               )
             ),
-            height: size.height * 0.13,
+            height:size.width > 500 ? size.height * 0.13 : size.height*0.07,
             width: size.width,
             child:
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                Image(
-                 height: size.height * 0.045,
-                   width: size.width * 0.055,
+                 height:size.height > 500? size.height * 0.045 :size.height*0.022,
+                   width:size.width > 500? size.width * 0.055 :size.width*0.025,
                    image:const AssetImage("images/logo.png"),fit: BoxFit.contain),
                 context.text(text: AllText.deevth, size:  size.width* 0.019, color: context.textColor,
                     wieght: FontWeight.w100 ,fontStyle: FontStyle.italic),
@@ -51,27 +52,28 @@ class Home extends StatelessWidget {
                 header(AllText.about_us_menu,size ,context ,false),
                 header(AllText.contact,size ,context ,false),
                 const Spacer(),
-                Container(
+                InkWell(
+                  child:  Image(image: AssetImage('images/menu.png'),
+                  height:size.height > 500? size.height*0.03 :size.height*0.015,
+                    width: size.width > 500 ? size.width * 0.05 :size.width*0.02,
 
-                  child:  IconButton(onPressed: (){}, icon: Icon(Icons.menu ,size:size.width*0.03,
-                    color:const Color(0xFFcbc8b9),)) ,
+                  ) ,
                 )
-
               ],),
           ),
           Stack(
             children: [
               Image(
                 width: size.width,
-                  height : size.height * 0.85,
+                  height :size.width > 500 ? size.height * 0.85 :size.height*0.42,
                   fit: BoxFit.fill,
-                  image: const AssetImage("images/back_h.png")),
+                  image: const AssetImage("images/back.png")),
               Positioned(
-                top :size.height *0.03,
+                top :size.height > 500 ?size.height *0.03 :size.height*0.01,
                 left: size.width *0.15,
                 right: size.width *0.15,
                 child: Container(
-                margin: EdgeInsets.symmetric(vertical: size.height * 0.15  ),
+                margin: EdgeInsets.symmetric(vertical:size.width > 500 ? size.height * 0.15:size.height*0.05  ),
                 alignment: Alignment.center,
                 child:
                 Row(
@@ -82,15 +84,14 @@ class Home extends StatelessWidget {
                     TextButton(
                       onPressed: (){}, child: context.text(text: "<", size: size.width*0.05, color:  (0xFF62707b)),
                     ),
-
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Image(image: AssetImage("images/logo.png"),
+                        Image(image:const AssetImage("images/logo.png"),
                           fit: BoxFit.contain,
-                          height:size.height * 0.17,
-                          width: size.width * 0.17,),
+                          height:size.width > 500 ?size.height * 0.17 :size.height*0.08,
+                          width:size.width > 500 ? size.width * 0.17 :size.width*0.08,),
                         SizedBox(height: size.height * 0.03,),
                         context.text(text: AllText.design, size: size.width* 0.02, color: context.whiteColor,
                             fontStyle: FontStyle.italic ,wieght: FontWeight.w100)
@@ -104,7 +105,7 @@ class Home extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Container(
-                    margin: EdgeInsets.only(left: size.width* 0.1 ,top:size.height*0.86),
+                    margin: EdgeInsets.only(left: size.width* 0.1 ,top: size.width > 500 ?size.height*0.86 :size.height*0.4),
                     width: size.width * 0.41,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -132,7 +133,7 @@ class Home extends StatelessWidget {
 
                       ],),
                   ),
-                  ImageController(size ,context ,0 ,0.7,0.07),
+                  ImageController(size ,context ,0 ,size.width > 500 ? 0.7:0.33,0.07),
 
                 ],
               ),
@@ -143,10 +144,12 @@ class Home extends StatelessWidget {
           AboutUs(),
           Container(
             padding: EdgeInsets.only(bottom: size.height * 0.01 ),
-            height: size.height * 0.05,
+            height:size.height > 500 ? size.height * 0.05 :size.height*0.025,
             width: size.width,
             alignment: Alignment.center,
-            child: context.text(text: AllText.bottomText, size: size.height * 0.02, color: (0xFF3b4d5b)),
+            child: context.text(text: AllText.bottomText,
+                size:size.width > 500 ? size.height * 0.02 :size.height*0.01,
+                color: (0xFF3b4d5b)),
           )
         ],
       ),

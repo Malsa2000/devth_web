@@ -160,11 +160,12 @@ class AboutUsApp extends StatelessWidget {
               ),
               Container(
                 width: double.infinity,
+
                 alignment: Alignment.center,
                 margin: EdgeInsets.only(top: 30.h),
                 padding: EdgeInsets.symmetric(vertical: 123.h),
                 decoration: const BoxDecoration(
-                  image:  DecorationImage(image: AssetImage("images/back_tile.png") ,fit: BoxFit.fill),
+                  image:  DecorationImage(image: AssetImage("images/tile_back.png") ,fit: BoxFit.fill),
                 ),
                 child: Column(
                   children: [
