@@ -7,9 +7,24 @@ class OurServesApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return
+      Stack(children: [
+        Container(
+        alignment: Alignment.center,
+        margin: EdgeInsets.only(
+            top:550.h,
+            right: 200.w,
+            left: 200.w
+
+        ),
+        child: Image(
+            width: 1150.w,
+            height:150.h,
+            image:const AssetImage("images/dots.PNG"),fit: BoxFit.fitWidth),
+      ),Column(
       children: [
         Container(
+
           margin: EdgeInsets.only(right: 630.w ,top :150.h ),
           alignment: Alignment.centerLeft,
           decoration: BoxDecoration(
@@ -76,6 +91,7 @@ class OurServesApp extends StatelessWidget {
             minHeight: 600.h,
           ),
           child: GridView.builder(
+            physics: NeverScrollableScrollPhysics(),
               itemCount: 5,
               padding: EdgeInsets.symmetric(
                   horizontal: 200.w),
@@ -185,7 +201,7 @@ class OurServesApp extends StatelessWidget {
                                   child: CircleAvatar(
                                     radius: 116.r,
                                     backgroundImage:
-                                    AssetImage("images/${AllText.image[index]}.png"),
+                                    AssetImage("images/${AllText.image[index]}"),
                                   ))),
                         ],
                       ),
@@ -196,7 +212,7 @@ class OurServesApp extends StatelessWidget {
                 );
               }),
         )
-
+    ])
       ],
     );
   }

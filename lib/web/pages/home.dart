@@ -11,21 +11,62 @@ class HomeApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+          elevation: 10,
+          child:Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(height: 150.h,),
+              TextButton(onPressed: (){
+                //Navigator.pop(context);
+              }, child: context.text(
+                color: context.mainColor,
+                text: AllText.home,
+                wieght: FontWeight.w900,
+                size: 36.sp, )),
+              const Divider(),
+              TextButton(onPressed: (){
+                Navigator.pop(context);
+
+              }, child: context.text(text: AllText.serviceMenu,
+                color: context.mainColor,
+                wieght: FontWeight.w900,
+                size: 36.sp, )),
+              const Divider(),
+              TextButton(onPressed: (){    Navigator.pop(context);
+              }, child: context.text(text: AllText.about_us_menu,
+                color: context.mainColor,
+                wieght: FontWeight.w900,
+                size: 36.sp, )),
+              const Divider(),
+              TextButton(onPressed: (){
+                Navigator.pop(context);
+
+              }, child: context.text(text: AllText.contact,
+                color: context.mainColor,
+                wieght: FontWeight.w900,
+                size: 36.sp, )),
+              const Divider(),
+
+            ],)
+      ),
+
       appBar: AppBar(
         backgroundColor: Color(context.mainColor),
         title: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Image(
-                height:41.h,
-                width: 47.w,
+                height:80.h,
+                width: 90.w,
                 image: const AssetImage("images/logo.png"),fit: BoxFit.contain),
-            context.text(text: AllText.deevth, size: 22.sp, color: context.textColor,
+            context.text(text: AllText.deevth, size: 25.sp, color: context.textColor,
                 wieght: FontWeight.w100 ,fontStyle: FontStyle.italic),          ],
         ),
       ),
       body: ListView(
-        padding: EdgeInsets.only(top:20.h),
+        padding: EdgeInsets.only(top: 20.h),
         children: [
           Home1(),
           Container(
@@ -74,7 +115,7 @@ class HomeApp extends StatelessWidget {
             )
             ,),
           Container(
-            margin: EdgeInsets.only(left: 200.w ,right:200.w ,top: 200.h),
+            margin: EdgeInsets.only(left: 250.w ,right:250.w ,top: 200.h),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -83,7 +124,7 @@ class HomeApp extends StatelessWidget {
                     size: 36.sp, color: (0xFF3b4d5b),align: TextAlign.start ,wieght: FontWeight.w600),
                 SizedBox(height:100.h),
                 context.text(text:AllText.whoArePhrgraph,
-                    size: 18.sp, color: (0xFF3b4d5b),align: TextAlign.start )
+                    size: 20.sp, color: (0xFF3b4d5b),align: TextAlign.start )
               ],),
           ),
           OurServesApp(),

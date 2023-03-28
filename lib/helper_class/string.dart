@@ -52,7 +52,7 @@ solutions, and omni-channel management.''';
     "Business",
     "Management"
   ];
-  static const  List<String> image = ["servis1.png", "image1.png", "servis3.png", "s4.JPG", "s5.png"];
+  static const  List<String> image = ["servis1.png", "image1.png", "servis3.png", "s4.png", "s5.png"];
   static const List<String> text1 = ["• Interior Design","• Branding Strategy","• Full stack development"," Business Strategy & Mod-eling"
     ,"• PMO & Project Manage-ment"];
   static const List<String> text2 = ["• Exterior Design","• Re-branding","• ERP solutions" ,"• Process Mapping & Auto-mation","• Executive Management"];
