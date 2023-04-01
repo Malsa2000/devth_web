@@ -105,9 +105,11 @@ class HomeApp extends StatelessWidget {
                     width: 58.w,
                     height: 51.h,
                   ),
-                  context.text(text: "Deevth  | ", size: 40.sp, color: (0xFFcbc8b9),wieght: FontWeight.w200,
+                  context.text(text: "Deevth | ", size: 40.sp, color: (0xFFcbc8b9),
+                  wieght: FontWeight.w400,
                       fontStyle: FontStyle.italic),
-                  context.text(text: AllText.whoAreTitle, size:48.sp, color: (0xFFFFFFFF) ,wieght: FontWeight.w500 ,
+                  context.text( text: AllText.whoAreTitle, size:48.sp, color: (context.textColor)
+                   ,wieght: FontWeight.w400 ,
                       fontStyle: FontStyle.italic)
 
                 ],
@@ -122,7 +124,7 @@ class HomeApp extends StatelessWidget {
               children: [
                 context.text(text: AllText.whoAreSubTitle,
                     size: 36.sp, color: (0xFF3b4d5b),align: TextAlign.start ,wieght: FontWeight.w600),
-                SizedBox(height:100.h),
+                SizedBox(height:50.h),
                 context.text(text:AllText.whoArePhrgraph,
                     size: 20.sp, color: (0xFF3b4d5b),align: TextAlign.start )
               ],),

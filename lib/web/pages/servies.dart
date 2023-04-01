@@ -24,7 +24,6 @@ class OurServesApp extends StatelessWidget {
       ),Column(
       children: [
         Container(
-
           margin: EdgeInsets.only(right: 630.w ,top :150.h ),
           alignment: Alignment.centerLeft,
           decoration: BoxDecoration(
@@ -39,6 +38,7 @@ class OurServesApp extends StatelessWidget {
             height:126.h,
             width:623.w,
             decoration: BoxDecoration(
+
                 borderRadius: BorderRadius.all(Radius.circular(60.r)),
                 boxShadow:const [BoxShadow(color: Colors.black26 ,blurRadius: 2 ,offset: Offset(3,3))],
                 gradient:const LinearGradient(
@@ -61,7 +61,7 @@ class OurServesApp extends StatelessWidget {
                 ),
                 context.text(text: "Deevth  | ", size: 40.sp, color: (0xFFcbc8b9),wieght: FontWeight.w200,
                     fontStyle: FontStyle.italic),
-                context.text(text: AllText.service, size:48.sp, color: (0xFFFFFFFF) ,wieght: FontWeight.w500 ,
+                context.text(text: AllText.service, size:48.sp, color: (context.textColor) ,wieght: FontWeight.w500 ,
                     fontStyle: FontStyle.italic)
 
               ],
@@ -77,9 +77,15 @@ class OurServesApp extends StatelessWidget {
               right: 306.w,),
           alignment: Alignment.center,
           decoration: BoxDecoration(
-              color: Color(context.grayColor),
+             border: Border.all(
+               color: Color(0xFF7d8187),
+                    width: 0.2),
               borderRadius: BorderRadius.circular(66.r),
-              border: Border.all(color: Colors.black87, width: 0.3)),
+            boxShadow: const[
+                BoxShadow(color: Colors.black12 ,offset: Offset(3,3) ,blurRadius: 2)
+              ],
+                color: const Color(0xFFf7f5f1),
+                     ),
           child: context.text(
               text: AllText.ourServiesText,
               size:19.sp,
@@ -137,46 +143,49 @@ class OurServesApp extends StatelessWidget {
                             width: 235.w,
                             height: 371.h,
                             margin: EdgeInsets.only(
-                              left: 40.w,
+                            left: 40.w,
                             ),
                             padding: EdgeInsets.only(
                                 left: 30.w,
                                 right: 30.w,
                                 top: 70.h),
                             decoration: BoxDecoration(
-                                color: Color(context.grayColor),
+                                boxShadow:const [
+                         BoxShadow(color: Colors.black12 ,offset: Offset(3,3) ,blurRadius: 2)
+              ],
+                           color: const Color(0xFFf7f5f1),
                                 border: Border.all(
-                                    color: Color(context.blackColor),
-                                    width: 0.3),
+                                    color: Color(0xFF7d8187),
+                                    width: 0.2),
                                 borderRadius: BorderRadius.circular(50.r)),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 context.text(
                                     text: AllText.mainText[index],
-                                    size: 14.sp,
+                                    size: 15.sp,
                                     color: context.blackColor,
                                     wieght: FontWeight.w500),
                                 SizedBox(height: 25.h),
                                 context.text(
                                     text: AllText.text1[index],
-                                    size:14.sp,
+                                    size:15.sp,
                                     color: context.blackColor,
                                     fontStyle: FontStyle.italic,
-                                    wieght: FontWeight.w600),
+                                    wieght: FontWeight.w400),
                                 context.text(
                                     text: AllText.text2[index],
-                                    size: 14.sp,
+                                    size: 15.sp,
                                     fontStyle: FontStyle.italic,
                                     color: context.blackColor,
-                                    wieght: FontWeight.w600),
+                                    wieght: FontWeight.w400),
 
                               ],
                             ),
                           ),
                           Positioned(
                               child: Container(
-                                padding: EdgeInsets.all(20.w),
+                                alignment: Alignment.center,
                                 margin: EdgeInsets.only(top:27.h),
                                 width: 132.w,
                                 height: 30.h,
@@ -188,18 +197,18 @@ class OurServesApp extends StatelessWidget {
                                     ])),
                                 child: context.text(
                                     text: AllText.textTile[index],
-                                    size:14.sp,
-                                    wieght: FontWeight.w100,
+                                    size:16.sp,
+                                    wieght: FontWeight.w500,
                                     color: context.whiteColor),
                               )),
                           Positioned(
                               bottom:0,
                               left: 70.w,
                               child: CircleAvatar(
-                                  radius: 120.r,
+                                  radius: 105.r,
                                   backgroundColor: Colors.white,
                                   child: CircleAvatar(
-                                    radius: 116.r,
+                                    radius: 100.r,
                                     backgroundImage:
                                     AssetImage("images/${AllText.image[index]}"),
                                   ))),

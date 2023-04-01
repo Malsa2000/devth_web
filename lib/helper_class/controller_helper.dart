@@ -13,7 +13,7 @@ extension ControllerHelp on BuildContext{
    return (0xFF3a4c5a);
  }
  int get textColor{
-   return (0xFFcbc8b9);
+   return (0xFFf0ede4);
  }
  int get whiteColor{
    return (0xFFFFFFFF);
@@ -30,9 +30,9 @@ extension ControllerHelp on BuildContext{
     required int color ,FontWeight wieght = FontWeight.normal ,
     TextAlign align = TextAlign.center , FontStyle fontStyle: FontStyle.normal,}){
   return Text(
-
-      text ,style :GoogleFonts.arimo(fontSize :size ,fontWeight: wieght ,fontStyle: fontStyle,
+      text ,style :GoogleFonts.jost(fontSize :size ,fontWeight: wieght ,fontStyle: fontStyle,
       color : Color(color) ,height:1.2) ,textAlign: align, );
   //Arimo
+  //Arial
   }
 }

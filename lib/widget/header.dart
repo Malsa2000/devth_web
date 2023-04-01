@@ -11,8 +11,8 @@ Widget header(String name , Size size , BuildContext context ,bool select){
           padding: EdgeInsets.only( left:name == "Home"? size.width* 0  : size.width* 0.015,),
           child: TextButton(onPressed: (){},
               child: context.text(text: "$name", size:  size.width* 0.013,
-                  color: select == true ? (0xFFa1c0bf) :  context.whiteColor,
-                  wieght: FontWeight.w300)),
+                  color: select == true ? (0xFFa1c0bf) :  (0xFFf0eee4),
+                  wieght: FontWeight.w400)),
         ),
         CircleAvatar(
           backgroundColor: select == true ?const Color(0xFFa1c0bf) : Colors.transparent ,

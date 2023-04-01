@@ -12,7 +12,7 @@ class Home2 extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Container(
-      padding: EdgeInsets.only(left: size.width* 0.1 ),
+      padding: EdgeInsets.only(left: size.width* 0.1 ,bottom:size.width > 500 ? size.height* 0.07 : size.height* 0.03),
       child:
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -20,7 +20,7 @@ class Home2 extends StatelessWidget {
             children: [
               SizedBox(height:size.width > 500 ?  size.height * 0.1:size.height*0.05,),
               conteainerTitle( AllText.whoAreTitle ,size ,context, 0.30 ,0),
-              SizedBox(height:size.width > 500 ?  size.height * 0.05:size.height*0.025,),
+              SizedBox(height:size.width > 500 ?  size.height * 0.1:size.height*0.05,),
               Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,

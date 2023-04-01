@@ -8,7 +8,7 @@ Widget ImageController( Size size , BuildContext context ,double left ,double to
     alignment: Alignment.center,
     decoration: BoxDecoration(
         image: const  DecorationImage(image: AssetImage("images/image1.png")),
-        borderRadius: BorderRadius.circular(size.width* 0.04),
+        borderRadius: BorderRadius.circular(size.width* 0.028),
         color: Color(context.mainColor),
         boxShadow:const [
           BoxShadow(color: Colors.black26 ,blurRadius: 3 ,offset: Offset(3, 4))

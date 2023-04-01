@@ -20,7 +20,7 @@ class OurServesis extends StatelessWidget {
           ),
           child: Image(
               width: size.width * 0.95,
-              height:size.width>500? size.height * 0.29 :size.height * 0.15 ,
+              height:size.width>500? size.height * 0.34 :size.height * 0.15 ,
               image:const AssetImage("images/dots.PNG"),fit: BoxFit.fitWidth),
         ),
         Column(
@@ -30,16 +30,19 @@ class OurServesis extends StatelessWidget {
           Container(
             padding: EdgeInsets.all(size.width * 0.014),
             margin: EdgeInsets.only(
-              top:size.width > 500 ? size.height * 0.1: size.height*0.05,
+              top:size.width > 500 ? size.height * 0.12: size.height*0.05,
               left: size.width * 0.13,
               right: size.width * 0.13,
               bottom:size.width > 500 ?  size.height * 0.07 :size.height * 0.03
             ),
             alignment: Alignment.center,
             decoration: BoxDecoration(
-                color: Color(context.grayColor),
+              boxShadow: [
+                BoxShadow(color: Colors.black12 ,offset: Offset(3,3) ,blurRadius: 2)
+              ],
+                color: Color(0xFFf7f5f1),
                 borderRadius: BorderRadius.circular(size.height * 0.5),
-                border: Border.all(color: Colors.black87, width: 0.3)),
+                border: Border.all(color: Color(0xFF7d8187), width: 0.7)),
             child: context.text(
                 text: AllText.ourServiesText,
                 size: size.width * 0.012,
@@ -64,25 +67,28 @@ class OurServesis extends StatelessWidget {
                   return Stack(
                     children: [
                       Container(
-                        height:(size.width * 0.26)+(size.width * 0.0275),
+                        height:(size.width * 0.24)+(size.width * 0.0275),
                         color: Colors.white,
                         child: Stack(
                           children: [
                             Container(
-                              width: size.width * 0.14,
-                              height: size.width * 0.24,
+                              width: size.width * 0.17,
+                              height: size.width * 0.22,
                               margin: EdgeInsets.only(
-                                left: size.width * 0.04,
+                                left: size.width * 0.03,
                               ),
                               padding: EdgeInsets.only(
                                   left: size.width * 0.006,
                                   right: size.width * 0.006,
-                                  top:size.width > 500 ? size.height * 0.05:size.height*0.02),
+                                  top:size.width > 500 ? size.height * 0.07:size.height*0.03),
                               decoration: BoxDecoration(
-                                  color: Color(context.grayColor),
+                                  boxShadow: const[
+                                BoxShadow(color: Colors.black12 ,offset: Offset(3,3) ,blurRadius: 2)
+                                  ],
+                                  color:const Color(0xfff7f5f1),
                                   border: Border.all(
-                                      color: Color(context.blackColor),
-                                      width: 0.3),
+                                      color:const Color(0xFF7d8187),
+                                      width: 0.7),
                                   borderRadius: BorderRadius.circular(size.width*0.03)),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -92,26 +98,27 @@ class OurServesis extends StatelessWidget {
                                       text: AllText.mainText[index],
                                       size: size.width * 0.01,
                                       color: context.blackColor,
-                                      wieght: FontWeight.w500),
+                                      wieght: FontWeight.w400),
                                   SizedBox(height: size.height * 0.016),
                                   context.text(
                                       text: AllText.text1[index],
-                                      size: size.width * 0.008,
+                                      size: size.width * 0.009,
                                       color: context.blackColor,
                                       fontStyle: FontStyle.italic,
-                                      wieght: FontWeight.w600),
+                                      wieght: FontWeight.w400),
                                   context.text(
                                       text: AllText.text2[index],
-                                      size: size.width * 0.008,
+                                      size: size.width * 0.009,
                                       fontStyle: FontStyle.italic,
                                       color: context.blackColor,
-                                      wieght: FontWeight.w600),
+                                      wieght: FontWeight.w400),
 
                                 ],
                               ),
                             ),
                             Positioned(
                                 child: Container(
+                                  alignment: Alignment.center,
                                   padding: EdgeInsets.all(size.width * 0.0015),
                                   margin: EdgeInsets.only(top:size.width > 500 ? size.height * 0.015:size.height*0.005),
                                   width: size.width * 0.07,
@@ -124,8 +131,8 @@ class OurServesis extends StatelessWidget {
                                       ])),
                                   child: context.text(
                                       text: AllText.textTile[index],
-                                      size: size.width*0.01,
-                                      wieght: FontWeight.w100,
+                                      size: size.width*0.0085,
+                                      wieght: FontWeight.w400,
                                       color: context.whiteColor),
                                 )),
                             Positioned(
@@ -153,7 +160,7 @@ class OurServesis extends StatelessWidget {
                           child: Row(
                             children: [
                               context.text(
-                                  text: "..........",
+                                  text: ".......",
                                   size: size.width * 0.012,
                                   color: context.babyBlue,
                                   align: TextAlign.center),

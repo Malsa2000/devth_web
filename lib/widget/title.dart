@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../helper_class/controller_helper.dart';
 Widget conteainerTitle(String title ,Size size ,BuildContext context , double marginLeft ,double marginRight){
   return Container(
@@ -38,9 +37,9 @@ Widget conteainerTitle(String title ,Size size ,BuildContext context , double ma
             width: size.width* 0.045,
             height: size.height * 0.055,
           ),
-          context.text(text: "Deevth  | ", size: size.width * 0.014, color: (0xFFcbc8b9),wieght: FontWeight.w100,
+          context.text(text: "Deevth | ", size: size.width * 0.019, color: (0xFFcbc8b9),wieght: FontWeight.w300,
               fontStyle: FontStyle.italic),
-          context.text(text: "$title", size: size.width * 0.016, color: (0xFFFFFFFF) ,wieght: FontWeight.w100 ,
+          context.text(text: " $title", size: size.width * 0.016, color: (0xFFf0ede4) ,wieght: FontWeight.w400 ,
           fontStyle: FontStyle.italic)
 
         ],

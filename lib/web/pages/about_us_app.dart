@@ -16,7 +16,7 @@ class AboutUsApp extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                margin: EdgeInsets.only(left: 250.w  ),
+                margin: EdgeInsets.only(left: 550.w  ),
                 alignment: Alignment.centerLeft,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(60.r)),
@@ -51,9 +51,10 @@ class AboutUsApp extends StatelessWidget {
                         width: 58.w,
                         height: 51.h,
                       ),
-                      context.text(text: "Deevth  | ", size: 40.sp, color: (0xFFcbc8b9),wieght: FontWeight.w200,
+                      context.text(text: "Deevth | ", size: 46.sp, color: (0xFFcbc8b9),wieght: FontWeight.w400,
                           fontStyle: FontStyle.italic),
-                      context.text(text: AllText.about_us, size:48.sp, color: (0xFFFFFFFF) ,wieght: FontWeight.w500 ,
+                      context.text(text: AllText.about_us, size:48.sp, color: (context.textColor) 
+                      ,wieght: FontWeight.w500 ,
                           fontStyle: FontStyle.italic)
 
                     ],

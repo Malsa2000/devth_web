@@ -1,11 +1,10 @@
-
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../helper_class/controller_helper.dart';
 import '../helper_class/string.dart';
 import '../pages/about_us.dart';
 import '../pages/home2.dart';
 import '../pages/our_servises.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../widget/header.dart';
 import '../widget/image_contaner.dart';
 
@@ -23,7 +22,7 @@ class Home extends StatelessWidget {
           Container(
            margin: EdgeInsets.only(bottom:size.width > 500 ? size.height * 0.018 :size.height* 0.009,
                top:size.width > 500 ?  size.height * 0.005 :size.height *0.002),
-            padding: EdgeInsets.symmetric(horizontal:  size.width * 0.012),
+            padding: EdgeInsets.only(left:size.width * 0.019 ,right: size.width * 0.035),
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.centerLeft,
@@ -42,10 +41,14 @@ class Home extends StatelessWidget {
               children: [
                Image(
                  height:size.height > 500? size.height * 0.045 :size.height*0.022,
-                   width:size.width > 500? size.width * 0.055 :size.width*0.025,
-                   image:const AssetImage("images/logo.png"),fit: BoxFit.contain),
-                context.text(text: AllText.deevth, size:  size.width* 0.019, color: context.textColor,
-                    wieght: FontWeight.w100 ,fontStyle: FontStyle.italic),
+                   width:size.width > 500? size.width * 0.025 :size.width*0.025,
+                   image:const AssetImage("images/logo.png"),fit: BoxFit.fill),
+              Text(
+                  textAlign: TextAlign.start,
+                   AllText.deevth, style :GoogleFonts.jost(fontSize :
+              size.width* 0.017  ,fontWeight:  FontWeight.w200,fontStyle: FontStyle.italic,
+                  color : Color(context.textColor) ,height:0.0)),
+
                const Spacer(),
                 header(AllText.home,size ,context ,select),
                 header(AllText.serviceMenu,size ,context ,false),
@@ -54,8 +57,9 @@ class Home extends StatelessWidget {
                 const Spacer(),
                 InkWell(
                   child:  Image(image: AssetImage('images/menu.png'),
-                  height:size.height > 500? size.height*0.03 :size.height*0.015,
-                    width: size.width > 500 ? size.width * 0.05 :size.width*0.02,
+                  fit: BoxFit.fitHeight,
+                  height:size.height > 500? size.height*0.02 :size.height*0.01,
+                    width: size.width > 500 ? size.width * 0.033 :size.width*0.017,
 
                   ) ,
                 )
@@ -93,8 +97,8 @@ class Home extends StatelessWidget {
                           height:size.width > 500 ?size.height * 0.17 :size.height*0.08,
                           width:size.width > 500 ? size.width * 0.17 :size.width*0.08,),
                         SizedBox(height: size.height * 0.03,),
-                        context.text(text: AllText.design, size: size.width* 0.02, color: context.whiteColor,
-                            fontStyle: FontStyle.italic ,wieght: FontWeight.w100)
+                        context.text(text: AllText.design, size: size.width* 0.02, color: context.textColor,
+                            fontStyle: FontStyle.italic ,wieght: FontWeight.w400)
                       ],),
                        TextButton(onPressed: (){}, child: context.text(text: ">",  size: size.width*0.05, color:  (0xFF62707b),
                        ),)
@@ -105,7 +109,10 @@ class Home extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Container(
-                    margin: EdgeInsets.only(left: size.width* 0.1 ,top: size.width > 500 ?size.height*0.86 :size.height*0.4),
+                    margin: EdgeInsets.only(left: size.width* 0.1,
+                      right:size.width* 0.05,
+                        top: size.width > 500 ?size.height*0.86 :size.height*0.4 ,
+                     ),
                     width: size.width * 0.41,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -133,7 +140,7 @@ class Home extends StatelessWidget {
 
                       ],),
                   ),
-                  ImageController(size ,context ,0 ,size.width > 500 ? 0.7:0.33,0.07),
+                  ImageController(size ,context ,0, size.width > 500 ? 0.61 :0.3, 0.0),
 
                 ],
               ),

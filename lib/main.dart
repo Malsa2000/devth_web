@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../app/home.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 void main() {
   runApp(  MyApp());
 }
@@ -11,7 +12,6 @@ class MyApp extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-
     return  ScreenUtilInit(
     designSize: const Size(1820, 5024),
     minTextAdapt: true,
@@ -25,11 +25,11 @@ class MyApp extends StatelessWidget {
     );
   }
 chechPlatform(){
-  if (defaultTargetPlatform == TargetPlatform.android || defaultTargetPlatform == TargetPlatform.iOS ){
-          return HomeApp();
-       }
-       else{
-        return Home();
-       }
+  if (kIsWeb) {
+    return Home();
+  } else {
+    return HomeApp();
+
+  }
 }
 }

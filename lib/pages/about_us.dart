@@ -24,20 +24,20 @@ class AboutUs extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-            ImageController(size ,context ,0.1 ,0.05,0),
+            ImageController(size ,context ,0.1 ,size.width>500?0.15 :0.08,0),
             Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  margin: EdgeInsets.only(left :size.width*0.05 ,top:size.height*0.07 ),
+                  margin: EdgeInsets.only(left :size.width*0.05 ,top:size.width>500? size.height*0.16: size.height*0.08),
                   width: size.width * 0.38,
                   alignment: Alignment.centerLeft,
                   child:context.text(text: AllText.about_us_menu, size: size.width* 0.02,align: TextAlign.start,
                       color: context.mainColor,wieght: FontWeight.w600),
 
                 ),
-                   SizedBox(height:size.height *0.03,),
+                   SizedBox(height:size.width>500?size.height *0.03 :size.height *0.015,),
                    Container(
                    margin: EdgeInsets.only(left: size.width * 0.05,
                    top: size.height * 0.01),
@@ -48,6 +48,7 @@ class AboutUs extends StatelessWidget {
                 ),
               ],)
           ],),
+
           ImageController(size ,context ,0.2 ,size.width > 600 ?0.1 : 0.05,0),
           Container(
               margin: EdgeInsets.only(left: size.width * 0.23,top:size.width > 500 ?size.height * 0.12 :size.height * 0.05),
@@ -110,9 +111,9 @@ class AboutUs extends StatelessWidget {
             child: Column(
               children: [
                 context.text(text: AllText.aboutUsText7, size: size.width*0.01,
-                    color: (0xFFf0eee4),wieght: FontWeight.w100,fontStyle: FontStyle.italic),
+                    color: (0xFFf0eee4),wieght: FontWeight.w300,fontStyle: FontStyle.italic),
                 context.text(text: AllText.aboutUsText6,fontStyle: FontStyle.italic,
-                    size: size.width*0.01, color: (0xFFf0eee4),wieght: FontWeight.w100),
+                    size: size.width*0.01, color: (0xFFf0eee4),wieght: FontWeight.w300),
                 SizedBox(height:size.width > 500 ? size.height* 0.02:size.height*0.01),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -129,13 +130,13 @@ class AboutUs extends StatelessWidget {
 
                   ],),
                 SizedBox(height:size.width > 500 ? size.height* 0.02:size.height*0.01),
-                context.text(text: AllText.home, size: size.width*0.011, color: (0xFFf0eee4),wieght: FontWeight.w200),
+                context.text(text: AllText.home, size: size.width*0.011, color: (0xFFf0eee4),wieght: FontWeight.w400),
                 SizedBox(height:size.width > 500 ? size.height* 0.02:size.height*0.01),
-                context.text(text: AllText.whoAreMenu, size: size.width*0.011, color: (0xFFf0eee4),wieght: FontWeight.w200) ,
+                context.text(text: AllText.whoAreMenu, size: size.width*0.011, color: (0xFFf0eee4),wieght: FontWeight.w400) ,
                 SizedBox(height:size.width > 500 ? size.height* 0.02:size.height*0.01),
-                context.text(text: AllText.serviceMenu, size: size.width*0.011, color: (0xFFf0eee4),wieght: FontWeight.w200),
+                context.text(text: AllText.serviceMenu, size: size.width*0.011, color: (0xFFf0eee4),wieght: FontWeight.w400),
                 SizedBox(height:size.width > 500 ? size.height* 0.02:size.height*0.01),
-                context.text(text: AllText.about_us_menu, size: size.width*0.011, color: (0xFFf0eee4),wieght: FontWeight.w200),
+                context.text(text: AllText.about_us_menu, size: size.width*0.011, color: (0xFFf0eee4),wieght: FontWeight.w400),
 
               ],
             ),

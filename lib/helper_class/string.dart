@@ -1,5 +1,5 @@
 class AllText{
-  static const  String deevth = "Deevth";
+  static const  String deevth = " Deevth";
   static const  String home = "Home";
   static const  String service = "OUR SERVICSE";
   static const  String serviceMenu = "Our Servicse";

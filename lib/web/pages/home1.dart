@@ -32,8 +32,8 @@ class Home1 extends StatelessWidget {
                   height: 162.h,
                   width: 186.w,
                   image: const AssetImage("images/logo.png" ),fit: BoxFit.contain,),
-                SizedBox(height: 20.h,),
-                context.text(text: AllText.design, size: 36.sp, color: context.whiteColor,
+                SizedBox(height: 30.h,),
+                context.text(text: AllText.design, size: 36.sp, color: context.textColor,
                     fontStyle: FontStyle.italic ,wieght: FontWeight.w100)
               ],
             ),
@@ -68,7 +68,7 @@ class Home1 extends StatelessWidget {
                 ],),
             ),
             Container(
-              margin: EdgeInsets.only(left: 125.w,top:774.h ),
+              margin: EdgeInsets.only(left: 250.w,top:800.h ),
               alignment: Alignment.center,
               decoration: BoxDecoration(
                   image: const  DecorationImage(image: AssetImage("images/image1.png")),
