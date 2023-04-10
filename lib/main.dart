@@ -1,3 +1,5 @@
+import 'package:deevth/check_paltform.dart';
+import 'package:deevth/pages/coming_soon.dart';
 import 'package:deevth/web/pages/home.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +11,6 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  
   @override
   Widget build(BuildContext context) {
     return  ScreenUtilInit(
@@ -19,17 +20,10 @@ class MyApp extends StatelessWidget {
       return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(backgroundColor: Colors.white),
-        home :chechPlatform()
+        home : CheckPlatform()
       );
     },
     );
   }
-chechPlatform(){
-  if (kIsWeb) {
-    return Home();
-  } else {
-    return HomeApp();
 
-  }
-}
 }

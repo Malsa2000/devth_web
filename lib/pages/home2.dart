@@ -1,6 +1,5 @@
 
 import 'package:flutter/material.dart';
-
 import '../helper_class/controller_helper.dart';
 import '../helper_class/string.dart';
 import '../widget/title.dart';
@@ -12,15 +11,15 @@ class Home2 extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Container(
-      padding: EdgeInsets.only(left: size.width* 0.1 ,bottom:size.width > 500 ? size.height* 0.07 : size.height* 0.03),
+      padding: EdgeInsets.only(left: size.width* 0.1 ,bottom:size.width > 900 ? size.height* 0.07 : size.height* 0.03),
       child:
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height:size.width > 500 ?  size.height * 0.1:size.height*0.05,),
+              SizedBox(height:size.width > 900 ?  size.height * 0.1:size.height*0.05,),
               conteainerTitle( AllText.whoAreTitle ,size ,context, 0.30 ,0),
-              SizedBox(height:size.width > 500 ?  size.height * 0.1:size.height*0.05,),
+              SizedBox(height:size.width > 900 ?  size.height * 0.1:size.height*0.05,),
               Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,

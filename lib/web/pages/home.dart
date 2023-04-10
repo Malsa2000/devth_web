@@ -11,20 +11,38 @@ class HomeApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       drawer: Drawer(
-          elevation: 10,
+          elevation: 8,
           child:Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 150.h,),
+              Container(
+                alignment: Alignment.centerLeft,
+                padding: EdgeInsets.only(top: 200.h,left: 50.w),
+                margin: EdgeInsets.only(bottom: 150.h),
+                width: double.infinity,
+                height: 900.h,
+                color: Color(context.mainColor),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                  Image(image: const AssetImage("images/logo.png")
+                    ,width: 300.w,height: 250.h,),
+               SizedBox(height: 50.h,)
+               ,context.text(text: "Deevth", size: 75.sp, color: context.textColor),
+               context.text(text: "info@deevth.com", size: 50.sp, color: context.textColor),
+                ],),
+              ),
               TextButton(onPressed: (){
                 //Navigator.pop(context);
               }, child: context.text(
                 color: context.mainColor,
                 text: AllText.home,
                 wieght: FontWeight.w900,
-                size: 36.sp, )),
+                size: 50.sp, )),
               const Divider(),
               TextButton(onPressed: (){
                 Navigator.pop(context);
@@ -32,37 +50,36 @@ class HomeApp extends StatelessWidget {
               }, child: context.text(text: AllText.serviceMenu,
                 color: context.mainColor,
                 wieght: FontWeight.w900,
-                size: 36.sp, )),
+                size: 50.sp, )),
               const Divider(),
               TextButton(onPressed: (){    Navigator.pop(context);
               }, child: context.text(text: AllText.about_us_menu,
                 color: context.mainColor,
                 wieght: FontWeight.w900,
-                size: 36.sp, )),
+                size: 50.sp, )),
               const Divider(),
               TextButton(onPressed: (){
                 Navigator.pop(context);
-
               }, child: context.text(text: AllText.contact,
                 color: context.mainColor,
                 wieght: FontWeight.w900,
-                size: 36.sp, )),
+                size: 50.sp, )),
               const Divider(),
 
             ],)
       ),
-
       appBar: AppBar(
         backgroundColor: Color(context.mainColor),
         title: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Image(
-                height:80.h,
-                width: 90.w,
-                image: const AssetImage("images/logo.png"),fit: BoxFit.contain),
-            context.text(text: AllText.deevth, size: 25.sp, color: context.textColor,
-                wieght: FontWeight.w100 ,fontStyle: FontStyle.italic),          ],
+            // Image(
+            //     height:80.h,
+            //     width: 90.w,
+            //     image: const AssetImage("images/logo.png"),fit: BoxFit.contain),
+            context.text(text: AllText.deevth, size: 60.sp, color: context.textColor,
+                wieght: FontWeight.w300 ,fontStyle: FontStyle.italic),
+          ],
         ),
       ),
       body: ListView(
@@ -70,19 +87,18 @@ class HomeApp extends StatelessWidget {
         children: [
           Home1(),
           Container(
-            margin: EdgeInsets.only(left: 700.w ,right: 370.w),
+            margin: EdgeInsets.only(left: 700.w ,right: 430.w,top:30.h),
             alignment: Alignment.centerLeft,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(60.r)),
               color:const Color(0xFF3a4c5a),
-
             ),
-            height:126.h,
-            width:750.w,
+            height:130.h,
+            width:700.w,
             child: Container(
               alignment: Alignment.center,
-              height:126.h,
-              width:623.w,
+              height:130.h,
+              width:567.w,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(60.r)),
                   boxShadow:const [BoxShadow(color: Colors.black26 ,blurRadius: 2 ,offset: Offset(3,3))],
@@ -105,10 +121,10 @@ class HomeApp extends StatelessWidget {
                     width: 58.w,
                     height: 51.h,
                   ),
-                  context.text(text: "Deevth | ", size: 40.sp, color: (0xFFcbc8b9),
-                  wieght: FontWeight.w400,
+                  context.text(text: "Deevth | ", size: 38.sp, color: (0xFFcbc8b9),
+                  wieght: FontWeight.w300,
                       fontStyle: FontStyle.italic),
-                  context.text( text: AllText.whoAreTitle, size:48.sp, color: (context.textColor)
+                  context.text( text: AllText.whoAreTitle, size:40.sp, color: (context.textColor)
                    ,wieght: FontWeight.w400 ,
                       fontStyle: FontStyle.italic)
 
@@ -117,26 +133,26 @@ class HomeApp extends StatelessWidget {
             )
             ,),
           Container(
-            margin: EdgeInsets.only(left: 250.w ,right:250.w ,top: 200.h),
+            margin: EdgeInsets.only(left: 200.w ,right:200.w ,top: 200.h),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 context.text(text: AllText.whoAreSubTitle,
-                    size: 36.sp, color: (0xFF3b4d5b),align: TextAlign.start ,wieght: FontWeight.w600),
+                    size: 45.sp, color: (0xFF3b4d5b),align: TextAlign.start ,wieght: FontWeight.w600),
                 SizedBox(height:50.h),
                 context.text(text:AllText.whoArePhrgraph,
-                    size: 20.sp, color: (0xFF3b4d5b),align: TextAlign.start )
+                    size: 25.sp, color: (0xFF3b4d5b),align: TextAlign.start )
               ],),
           ),
           OurServesApp(),
           AboutUsApp(),
           Container(
             padding: EdgeInsets.only(bottom: 20.h ),
-            height: 100.h,
+            height: 120.h,
             width: double.infinity,
             alignment: Alignment.center,
-            child: context.text(text: AllText.bottomText, size: 18.sp, color: (0xFF3b4d5b)),
+            child: context.text(text: AllText.bottomText, size: 25.sp, color: (0xFF3b4d5b)),
           )
 
         ],
